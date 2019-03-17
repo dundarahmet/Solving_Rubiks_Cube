@@ -944,7 +944,6 @@ bool rubiksCube:: checkThePlusSignOnLowerSide( void ) {
 }
 
 bool rubiksCube:: findTheCorrectColourOnFLForPlusSign( void ) {
-    cout << "here 1 " << endl ;
     if (   holderLowerSide[r1][c2] == holderLowerSide[r2][c2]
         && holderFrontSide[r3][c2] == holderFrontSide[r2][c2] ) {
            return true ;
@@ -1120,7 +1119,6 @@ bool rubiksCube:: findTheCorrectColourOnFLForPlusSign( void ) {
     return false ;
 }
 bool rubiksCube:: findTheCorrectColourOnRLForPlusSign( void ) {
-    cout << "here 2 " << endl ;
     if (   holderLowerSide[r2][c3] == holderLowerSide[r2][c2]
         && holderRightSide[r3][c2] == holderRightSide[r2][c2] ) {
            return true ;
@@ -1282,7 +1280,6 @@ bool rubiksCube:: findTheCorrectColourOnRLForPlusSign( void ) {
     return false ;
 }
 bool rubiksCube:: findTheCorrectColourOnLLForPlusSign( void ) {
-    cout << "here 3 " << endl ;
     if (   holderLowerSide[r2][c1] == holderLowerSide[r2][c2]
         && holderLeftSide[r3][c2] == holderLeftSide[r2][c2] ) {
            return true ;
@@ -1426,7 +1423,6 @@ bool rubiksCube:: findTheCorrectColourOnLLForPlusSign( void ) {
     return false ;
 }
 bool rubiksCube:: findTheCorrectColourOnBLForPlusSign( void ) {
-    cout << "here 4 " << endl ;
     if (   holderLowerSide[r3][c2] == holderLowerSide[r2][c2]
         && holderBackSide[r3][c2] == holderBackSide[r2][c2] ) {
            return true ;
@@ -1455,7 +1451,7 @@ bool rubiksCube:: findTheCorrectColourOnBLForPlusSign( void ) {
     }
     if (   holderRightSide[r2][c3] == holderLowerSide[r2][c2]
         && holderBackSide[r2][c1] == holderBackSide[r2][c2] ) {
-           motionForBackToCounterClockWise() ;
+           motionForBackToClockWise() ;
            return true ;
     }
     if (   holderRightSide[r2][c3] == holderBackSide[r2][c2]
